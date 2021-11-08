@@ -14,7 +14,7 @@ def test_answe1r():
     """
     asd
     """
-    assert inc(3) == 5
+    assert inc(4) == 5
 
 
 def test_answer2():
