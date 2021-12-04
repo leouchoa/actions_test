@@ -27,6 +27,17 @@ Now everytime you make a commit, pre-commit will scan your python files and run.
 
 For more information on how I've set up this repo, please refer to [this blog post](https://towardsdatascience.com/4-pre-commit-plugins-to-automate-code-reviewing-and-formatting-in-python-c80c6d2e9f5)
 
+## **Important note**
+
+Suppose you're commiting a file called `asd.py`. In case your commit fails because of some test and you receive the following message
+
+```
+Stashed changes conflicted with hook auto-fixes... Rolling back fixes...
+```
+
+your code won't be accepted to be commited. If you inspect the results a bit further with `git status` you'll see that a new `asd.py` has the modified status.
+In that case please add the file once more and try to commit. Sometimes it takes me up to 3 times to make a commit.
+
 ## running  pylint
 
 I've tried following [this blogpost](https://medium.com/analytics-vidhya/pylint-static-code-analysis-github-action-to-fail-below-a-score-threshold-58a124aafaa0) to also run pylint along with flake8 but it's just not worth it.
