@@ -41,3 +41,7 @@ In that case please add the file once more and try to commit. Sometimes it takes
 ## running  pylint
 
 I've tried following [this blogpost](https://medium.com/analytics-vidhya/pylint-static-code-analysis-github-action-to-fail-below-a-score-threshold-58a124aafaa0) to also run pylint along with flake8 but it's just not worth it.
+
+## Solving Isort and Black Conflict
+
+Solution is [here](https://copdips.com/2020/04/making-isort-compatible-with-black.html). The only thing you need to do is to add an `args` flag to the isort hook id with this argument: `args: [--profile=black]`
